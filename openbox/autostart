@@ -1,0 +1,27 @@
+#
+# These things are run when an Openbox X Session is started.
+# You may place a similar script in $HOME/.config/openbox/autostart
+# to run user-specific things.
+#
+# You can set picom to use either xrender or glx
+# Change if issues
+#autorandr horizontal
+
+
+# Set background image
+xrandr --output HDMI-A-0 --mode 1366x768 --rate 59.79 --output eDP --off &
+feh --randomize --bg-fill /home/dmne/Pictures/background &
+# Panel
+#picom --experimental-backend &
+picom &
+tint2 &
+#tint2 -c /home/dmne/Documents/tint2rc
+## Volume control for systray
+pasystray --notify=all instead &
+# pasystray &
+blueman-applet &
+dunst &
+nm-applet &
+#gammy &
+#xmodmap  -e 'clear lock' &
+plank &
